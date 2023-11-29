@@ -1,0 +1,136 @@
+{
+  "intents": [
+    {
+      "tag": "open_chat_gpt",
+      "patterns": ["Open Chat GPT", "Launch Chat GPT", "Start Chat GPT", "Access conversational AI", "Initiate chat with GPT"],
+      "responses": ["Opening Chat GPT", "Launching Chat GPT", "Chat GPT is starting", "Accessing conversational AI", "Commencing chat with GPT"],
+      "commands": ["open_chatgpt"]
+    },
+    {
+      "tag": "google_search",
+      "patterns": ["Search in Google", "Google search", "Look up on Google", "Find information", "Query Google", "open google"],
+      "responses": ["Searching in Google", "Initiating Google search", "Google search is underway", "Accessing Google for information", "Commencing search"],
+      "commands": ["open_google"]
+    },
+    {
+      "tag": "chat_gpt_search",
+      "patterns": ["Ask Chat GPT", "Chat GPT question", "Engage Chat GPT", "Query Chat GPT", "Converse with GPT", "open chat gpt"],
+      "responses": ["Asking Chat GPT", "Initiating Chat GPT conversation", "Engaging Chat GPT", "Querying Chat GPT", "Commencing conversation with GPT"],
+      "commands": ["open_chatgpt"]
+    },
+    {
+      "tag": "open_chrome",
+      "patterns": ["Open Chrome", "Launch Chrome", "Start Chrome", "Run Chrome", "Initiate Chrome"],
+      "responses": ["Opening Chrome", "Launching Chrome browser", "Chrome is starting", "Accessing Chrome", "Commencing Chrome session"],
+      "commands": ["open_chrome_browser"]
+    },
+    {
+      "tag": "open_vscode",
+      "patterns": ["Open Visual Studio Code", "Launch VS Code", "Start coding", "Run VS Code", "Initiate coding environment"],
+      "responses": ["Opening Visual Studio Code", "Launching VS Code", "VS Code is starting", "Accessing coding environment", "Commencing coding session"],
+      "commands": ["open_code_editor"]
+    },
+    {
+      "tag": "open_youtube",
+      "patterns": ["Open YouTube", "Launch YouTube", "Start YouTube", "Play videos", "Access entertainment"],
+      "responses": ["Opening YouTube", "Launching YouTube", "YouTube is starting"],
+      "commands": ["open_youtube"]
+    },
+    {
+      "tag": "open_file_explorer",
+      "patterns": ["Open File Explorer", "Launch File Explorer", "Explore files", "Access file system", "Initiate file navigation"],
+      "responses": ["Opening File Explorer", "Launching File Explorer", "File Explorer is starting", "Accessing file system", "Commencing file exploration"],
+      "commands": ["open_file_explorer"]
+    },
+    {
+      "tag": "open_notepad",
+      "patterns": ["Open Notepad", "Launch Notepad", "Start Notepad", "Take notes", "Access text editor"],
+      "responses": ["Opening Notepad", "Launching Notepad", "Notepad is starting", "Accessing text editor", "Commencing note-taking"],
+      "commands": ["open_notepad_editor"]
+    },
+    {
+      "tag": "open_calendar",
+      "patterns": ["Open Calendar", "Launch Calendar", "Check the date", "Access schedule", "Initiate calendar"],
+      "responses": ["Opening Calendar", "Launching Calendar", "Calendar is starting", "Accessing schedule", "Commencing date check"],
+      "commands": ["open_calendar_app"]
+    },
+    {
+      "tag": "open_word",
+      "patterns": ["Open Microsoft Word", "Launch Word", "Start Word", "Create documents", "Access word processor"],
+      "responses": ["Opening Microsoft Word", "Launching Word", "Word is starting", "Accessing word processor", "Commencing document creation"],
+      "commands": ["open_word_processor"]
+    },
+    {
+      "tag": "open_excel",
+      "patterns": ["Open Microsoft Excel", "Launch Excel", "Start Excel", "Work with spreadsheets", "Access spreadsheet software"],
+      "responses": ["Opening Microsoft Excel", "Launching Excel", "Excel is starting", "Accessing spreadsheet software", "Commencing spreadsheet work"],
+      "commands": ["open_excel_sheet"]
+    },
+    {
+      "tag": "open_powerpoint",
+      "patterns": ["Open Microsoft PowerPoint", "Launch PowerPoint", "Start PowerPoint", "Create presentations", "Access presentation software"],
+      "responses": ["Opening Microsoft PowerPoint", "Launching PowerPoint", "PowerPoint is starting", "Accessing presentation software", "Commencing presentation creation"],
+      "commands": ["open_powerpoint_app"]
+    },
+    {
+      "tag": "open_terminal",
+      "patterns": ["Open Terminal", "Launch Terminal", "Start Command Prompt", "Run commands", "Access command line"],
+      "responses": ["Opening Terminal", "Launching Command Prompt", "Terminal is starting", "Accessing command line", "Commencing command execution"],
+      "commands": ["open_command_prompt"]
+    },
+    {
+      "tag": "open_calculator",
+      "patterns": ["Open Calculator", "Launch Calculator", "Start Calculator", "Perform calculations", "Access calculator tool"],
+      "responses": ["Opening Calculator", "Launching Calculator", "Calculator is starting", "Accessing calculator tool", "Commencing calculations"],
+      "commands": ["open_calculator_app"]
+    },
+    {
+      "tag": "open_browser",
+      "patterns": ["Open Browser", "Launch Browser", "Start Internet Browser", "Visit websites", "Access the internet"],
+      "responses": ["Opening Browser", "Launching Internet Browser", "Browser is starting", "Accessing the internet", "Commencing web browsing"],
+      "commands": ["open_default_browser"]
+    },
+    {
+      "tag": "open_mail",
+      "patterns": ["Open Email", "Launch Email", "Check Email", "Access inbox", "Initiate email"],
+      "responses": ["Opening Email", "Launching Email", "Email is starting", "Accessing inbox", "Commencing email check"],
+      "commands": ["open_email_client"]
+    },
+    {
+      "tag": "open_settings",
+      "patterns": ["Open Settings", "Launch Settings", "Configure settings", "Access preferences", "Initiate settings"],
+      "responses": ["Opening Settings", "Launching Settings", "Settings is starting", "Accessing preferences", "Commencing configuration"],
+      "commands": ["open_system_settings"]
+    },
+    {
+      "tag": "open_camera",
+      "patterns": ["Open Camera", "Launch Camera", "Start Camera", "Capture photos", "Access camera"],
+      "responses": ["Opening Camera", "Launching Camera", "Camera is starting", "Accessing camera", "Commencing photo capture"],
+      "commands": ["open_camera_app"]
+    },
+    {
+      "tag": "open_photos",
+      "patterns": ["Open Photos", "Launch Photos", "View Photos", "Access photo library", "Initiate photo viewing"],
+      "responses": ["Opening Photos", "Launching Photos", "Photos is starting", "Accessing photo library", "Commencing photo viewing"],
+      "commands": ["open_photo_viewer"]
+    },
+    {
+      "tag": "open_maps",
+      "patterns": ["Open Maps", "Launch Maps", "Find directions", "Access maps", "Initiate navigation"],
+      "responses": ["Opening Maps", "Launching Maps", "Maps is starting", "Accessing maps", "Commencing navigation"],
+      "commands": ["open_maps_app"]
+    },
+    {
+      "tag": "open_clock",
+      "patterns": ["Open Clock", "Launch Clock", "Set Alarm", "Access time", "Initiate clock"],
+      "responses": ["Opening Clock", "Launching Clock", "Clock is starting", "Accessing time", "Commencing alarm setup"],
+      "commands": ["open_clock_app"]
+    },
+    {
+      "tag": "open_weather",
+      "patterns": ["Check Weather", "Open Weather", "Get weather updates", "Access weather information", "Initiate weather check"],
+      "responses": ["Opening Weather", "Checking Weather", "Weather is starting", "Accessing weather information", "Commencing weather update"],
+      "commands": ["check_weather"]
+    }
+  ]
+}
