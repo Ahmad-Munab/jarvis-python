@@ -8,6 +8,8 @@ from utils.nltk_utils import bag_of_words, tokenize
 from utils.voice_utils import speak
 
 from features.funcions import functions
+from utils.context import get, update
+from utils.chat import chat
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -30,9 +32,7 @@ model.eval()
 
 bot_name = "Jarvis"
 def Process(sentence):
-    if sentence == "quit":
-        quit()
-
+    og_sentence = sentence
     sentence = tokenize(sentence)
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])
@@ -52,9 +52,11 @@ def Process(sentence):
                 for cmnd in intent['commands']:
                     try:
                         functions[cmnd]()
+                        new_msg=[{"role": "user", "message": og_sentence}, {"role": "assistant", "message": res}]
+                        update(history=get("history")+new_msg)
                         speak(res)
                     except:
                         speak(f"Failed to execute command {cmnd}")
     else:
-        res = "I do not understand..."
+        res = chat(og_sentence)
         speak(res)

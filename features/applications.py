@@ -15,7 +15,7 @@ def open_google():
     os.system("start https://google.com")
 
 def open_chatgpt():
-    os.system("start https://chat.openai.com")
+    os.system("start https://chat.openai.com/chat")
 
 def open_notepad_editor():
     os.system("notepad")
