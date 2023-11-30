@@ -45,7 +45,7 @@ def process(sentence):
 
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
-    if prob.item() > 0.85:
+    if prob.item() > 0.90:
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 update(commands_history=get("commands_history")+[tag])

@@ -1,8 +1,9 @@
 import json
 import requests, os
 from utils.context import get, update
+from decouple import config
 
-headers = {"Authorization": f"Bearer {os.environ['EDENAI_API_KEY']}"}
+headers = {"Authorization": f"Bearer {config('EDENAI_API_KEY')}"}
 url = "https://api.edenai.run/v2/text/chat"
 
 def chat(msg):

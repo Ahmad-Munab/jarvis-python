@@ -62,6 +62,8 @@
             "tag": "open_chrome",
             "patterns": [
                 "Open Chrome",
+                "Open the browser",
+                "Start google chrome",
                 "Launch Chrome",
                 "Start Chrome",
                 "Run Chrome",
@@ -123,10 +125,10 @@
                 "Search on YouTube",
                 "YouTube search",
                 "Look up on YouTube",
-                "Find videos",
+                "Find videos on",
                 "Query YouTube",
                 "yo search YouTube for this",
-                "can ya find something on YouTube"
+                "can ya find something on YouTube about"
             ],
             "responses": [
                 "Searching on YouTube",
@@ -172,7 +174,82 @@
                 "Accessing information"
             ],
             "commands": ["search_anything"]
-        },        
+        },
+        {
+            "tag": "open_discord",
+            "patterns": [
+                "Open Discord",
+                "Launch Discord",
+                "Start Discord",
+                "Access Discord",
+                "yo Discord",
+                "can ya open Discord",
+                "go to Discord"
+            ],
+            "responses": [
+                "Opening Discord",
+                "Launching Discord",
+                "Discord is starting",
+                "Accessing Discord"
+            ],
+            "commands": ["open_discord"]
+        },
+        {
+            "tag": "open_facebook",
+            "patterns": [
+                "Open Facebook",
+                "Launch Facebook",
+                "Start Facebook",
+                "Access Facebook",
+                "yo Facebook",
+                "can ya open Facebook",
+                "go to Facebook"
+            ],
+            "responses": [
+                "Opening Facebook",
+                "Launching Facebook",
+                "Facebook is starting",
+                "Accessing Facebook"
+            ],
+            "commands": ["open_facebook"]
+        },
+        {
+            "tag": "start_google_meet",
+            "patterns": [
+                "create a meeting on google meet",
+                "Start Google Meet",
+                "Initiate Google Meet",
+                "Begin Google Meet",
+                "yo start a meeting",
+                "can ya start a meeting",
+                "go to Google Meet"
+            ],
+            "responses": [
+                "Starting a meeting",
+                "Initiating Google Meet",
+                "Google Meet is starting"
+            ],
+            "commands": ["start_google_meet"]
+        },
+        {
+            "tag": "open_github",
+            "patterns": [
+                "Open GitHub",
+                "Launch GitHub",
+                "Start GitHub",
+                "Access GitHub",
+                "yo GitHub",
+                "can ya open GitHub",
+                "go to GitHub"
+            ],
+            "responses": [
+                "Opening GitHub",
+                "Launching GitHub",
+                "GitHub is starting",
+                "Accessing GitHub"
+            ],
+            "commands": ["open_github"]
+        },
         {
             "tag": "open_file_explorer",
             "patterns": [

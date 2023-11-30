@@ -7,15 +7,15 @@ from features.browser.youtube import search_on_youtube
 from features.browser.google import search_on_google
 
 def search_anything(sentence):
-    for i in get("commands_history"):
+    for i in get("commands_history")[::-1]:
         if "google" in i:
             search_on_google(sentence)
-            break
+            return
         if "youtube" in i:
             search_on_youtube(sentence)
-            break   
-    if "google" in i:
-        search_on_google(sentence)
+            return  
+ 
+    search_on_google(sentence)
   
 
 
@@ -45,6 +45,19 @@ def open_default_browser():
 
 def open_email_client():
     os.system("start https://mail.google.com/mail/u/1/#inbox")
+
+def open_discord():
+    os.system("start https://discord.com/channels/@me")
+
+def open_facebook():
+    os.system("start https://www.facebook.com/")
+
+def start_google_meet():
+    os.system("start https://meet.google.com/pzt-psqh-mxs?pli=1&authuser=1")
+
+def open_github():
+    os.system("start https://github.com/")
+
 
 def open_camera_app():
     os.system("start microsoft.windows.camera:")
