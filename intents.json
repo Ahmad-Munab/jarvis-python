@@ -1,136 +1,478 @@
 {
-  "intents": [
-    {
-      "tag": "open_chat_gpt",
-      "patterns": ["Open Chat GPT", "Launch Chat GPT", "Start Chat GPT", "Access conversational AI", "Initiate chat with GPT"],
-      "responses": ["Opening Chat GPT", "Launching Chat GPT", "Chat GPT is starting", "Accessing conversational AI", "Commencing chat with GPT"],
-      "commands": ["open_chatgpt"]
-    },
-    {
-      "tag": "google_search",
-      "patterns": ["Search in Google", "Google search", "Look up on Google", "Find information", "Query Google", "open google"],
-      "responses": ["Searching in Google", "Initiating Google search", "Google search is underway", "Accessing Google for information", "Commencing search"],
-      "commands": ["open_google"]
-    },
-    {
-      "tag": "chat_gpt_search",
-      "patterns": ["Ask Chat GPT", "Chat GPT question", "Engage Chat GPT", "Query Chat GPT", "Converse with GPT", "open chat gpt"],
-      "responses": ["Asking Chat GPT", "Initiating Chat GPT conversation", "Engaging Chat GPT", "Querying Chat GPT", "Commencing conversation with GPT"],
-      "commands": ["open_chatgpt"]
-    },
-    {
-      "tag": "open_chrome",
-      "patterns": ["Open Chrome", "Launch Chrome", "Start Chrome", "Run Chrome", "Initiate Chrome"],
-      "responses": ["Opening Chrome", "Launching Chrome browser", "Chrome is starting", "Accessing Chrome", "Commencing Chrome session"],
-      "commands": ["open_chrome_browser"]
-    },
-    {
-      "tag": "open_vscode",
-      "patterns": ["Open Visual Studio Code", "Launch VS Code", "Start coding", "Run VS Code", "Initiate coding environment"],
-      "responses": ["Opening Visual Studio Code", "Launching VS Code", "VS Code is starting", "Accessing coding environment", "Commencing coding session"],
-      "commands": ["open_code_editor"]
-    },
-    {
-      "tag": "open_youtube",
-      "patterns": ["Open YouTube", "Launch YouTube", "Start YouTube", "Play videos", "Access entertainment"],
-      "responses": ["Opening YouTube", "Launching YouTube", "YouTube is starting"],
-      "commands": ["open_youtube"]
-    },
-    {
-      "tag": "open_file_explorer",
-      "patterns": ["Open File Explorer", "Launch File Explorer", "Explore files", "Access file system", "Initiate file navigation"],
-      "responses": ["Opening File Explorer", "Launching File Explorer", "File Explorer is starting", "Accessing file system", "Commencing file exploration"],
-      "commands": ["open_file_explorer"]
-    },
-    {
-      "tag": "open_notepad",
-      "patterns": ["Open Notepad", "Launch Notepad", "Start Notepad", "Take notes", "Access text editor"],
-      "responses": ["Opening Notepad", "Launching Notepad", "Notepad is starting", "Accessing text editor", "Commencing note-taking"],
-      "commands": ["open_notepad_editor"]
-    },
-    {
-      "tag": "open_calendar",
-      "patterns": ["Open Calendar", "Launch Calendar", "Check the date", "Access schedule", "Initiate calendar"],
-      "responses": ["Opening Calendar", "Launching Calendar", "Calendar is starting", "Accessing schedule", "Commencing date check"],
-      "commands": ["open_calendar_app"]
-    },
-    {
-      "tag": "open_word",
-      "patterns": ["Open Microsoft Word", "Launch Word", "Start Word", "Create documents", "Access word processor"],
-      "responses": ["Opening Microsoft Word", "Launching Word", "Word is starting", "Accessing word processor", "Commencing document creation"],
-      "commands": ["open_word_processor"]
-    },
-    {
-      "tag": "open_excel",
-      "patterns": ["Open Microsoft Excel", "Launch Excel", "Start Excel", "Work with spreadsheets", "Access spreadsheet software"],
-      "responses": ["Opening Microsoft Excel", "Launching Excel", "Excel is starting", "Accessing spreadsheet software", "Commencing spreadsheet work"],
-      "commands": ["open_excel_sheet"]
-    },
-    {
-      "tag": "open_powerpoint",
-      "patterns": ["Open Microsoft PowerPoint", "Launch PowerPoint", "Start PowerPoint", "Create presentations", "Access presentation software"],
-      "responses": ["Opening Microsoft PowerPoint", "Launching PowerPoint", "PowerPoint is starting", "Accessing presentation software", "Commencing presentation creation"],
-      "commands": ["open_powerpoint_app"]
-    },
-    {
-      "tag": "open_terminal",
-      "patterns": ["Open Terminal", "Launch Terminal", "Start Command Prompt", "Run commands", "Access command line"],
-      "responses": ["Opening Terminal", "Launching Command Prompt", "Terminal is starting", "Accessing command line", "Commencing command execution"],
-      "commands": ["open_command_prompt"]
-    },
-    {
-      "tag": "open_calculator",
-      "patterns": ["Open Calculator", "Launch Calculator", "Start Calculator", "Perform calculations", "Access calculator tool"],
-      "responses": ["Opening Calculator", "Launching Calculator", "Calculator is starting", "Accessing calculator tool", "Commencing calculations"],
-      "commands": ["open_calculator_app"]
-    },
-    {
-      "tag": "open_browser",
-      "patterns": ["Open Browser", "Launch Browser", "Start Internet Browser", "Visit websites", "Access the internet"],
-      "responses": ["Opening Browser", "Launching Internet Browser", "Browser is starting", "Accessing the internet", "Commencing web browsing"],
-      "commands": ["open_default_browser"]
-    },
-    {
-      "tag": "open_mail",
-      "patterns": ["Open Email", "Launch Email", "Check Email", "Access inbox", "Initiate email"],
-      "responses": ["Opening Email", "Launching Email", "Email is starting", "Accessing inbox", "Commencing email check"],
-      "commands": ["open_email_client"]
-    },
-    {
-      "tag": "open_settings",
-      "patterns": ["Open Settings", "Launch Settings", "Configure settings", "Access preferences", "Initiate settings"],
-      "responses": ["Opening Settings", "Launching Settings", "Settings is starting", "Accessing preferences", "Commencing configuration"],
-      "commands": ["open_system_settings"]
-    },
-    {
-      "tag": "open_camera",
-      "patterns": ["Open Camera", "Launch Camera", "Start Camera", "Capture photos", "Access camera"],
-      "responses": ["Opening Camera", "Launching Camera", "Camera is starting", "Accessing camera", "Commencing photo capture"],
-      "commands": ["open_camera_app"]
-    },
-    {
-      "tag": "open_photos",
-      "patterns": ["Open Photos", "Launch Photos", "View Photos", "Access photo library", "Initiate photo viewing"],
-      "responses": ["Opening Photos", "Launching Photos", "Photos is starting", "Accessing photo library", "Commencing photo viewing"],
-      "commands": ["open_photo_viewer"]
-    },
-    {
-      "tag": "open_maps",
-      "patterns": ["Open Maps", "Launch Maps", "Find directions", "Access maps", "Initiate navigation"],
-      "responses": ["Opening Maps", "Launching Maps", "Maps is starting", "Accessing maps", "Commencing navigation"],
-      "commands": ["open_maps_app"]
-    },
-    {
-      "tag": "open_clock",
-      "patterns": ["Open Clock", "Launch Clock", "Set Alarm", "Access time", "Initiate clock"],
-      "responses": ["Opening Clock", "Launching Clock", "Clock is starting", "Accessing time", "Commencing alarm setup"],
-      "commands": ["open_clock_app"]
-    },
-    {
-      "tag": "open_weather",
-      "patterns": ["Check Weather", "Open Weather", "Get weather updates", "Access weather information", "Initiate weather check"],
-      "responses": ["Opening Weather", "Checking Weather", "Weather is starting", "Accessing weather information", "Commencing weather update"],
-      "commands": ["check_weather"]
-    }
-  ]
+    "intents": [
+        {
+            "tag": "open_chatgpt",
+            "patterns": [
+                "Open Chat GPT",
+                "Launch Chat GPT",
+                "Start Chat GPT",
+                "Access conversational AI",
+                "Initiate chat with GPT",
+                "yo GPT",
+                "can ya open chat",
+                "go to chat GPT"
+            ],
+            "responses": [
+                "Opening Chat GPT",
+                "Launching Chat GPT",
+                "Chat GPT is starting",
+                "Accessing conversational AI"
+            ],
+            "commands": ["open_chatgpt"]
+        },
+        {
+            "tag": "open_google",
+            "patterns": [
+                "Google",
+                "open google",
+                "start google",
+                "Query Google",
+                "google something",
+                "yo go to google quickly",
+                "go to Google"
+            ],
+            "responses": [
+                "Opening Google",
+                "Initiating Google",
+                "Google is underway",
+                "Accessing Google",
+                "Starting Google"
+            ],
+            "commands": ["open_google"]
+        },
+        {
+            "tag": "search_on_google",
+            "patterns": [
+                "Search in Google",
+                "Google search",
+                "Look up on Google",
+                "Find information",
+                "Query Google",
+                "yo google this"
+            ],
+            "responses": [
+                "Searching in Google",
+                "Initiating Google search",
+                "Google search is underway",
+                "Accessing Google for information"
+            ],
+            "commands": ["search_on_google"]
+        },
+        {
+            "tag": "open_chrome",
+            "patterns": [
+                "Open Chrome",
+                "Launch Chrome",
+                "Start Chrome",
+                "Run Chrome",
+                "Initiate Chrome",
+                "yo Chrome",
+                "can ya open Chrome",
+                "go to Chrome"
+            ],
+            "responses": [
+                "Opening Chrome",
+                "Launching Chrome browser",
+                "Chrome is starting",
+                "Accessing Chrome"
+            ],
+            "commands": ["open_chrome_browser"]
+        },
+        {
+            "tag": "open_code_editor",
+            "patterns": [
+                "Open Visual Studio Code",
+                "Launch VS Code",
+                "Start coding",
+                "Run VS Code",
+                "Initiate coding environment",
+                "yo code",
+                "can ya open VS Code",
+                "go to VS Code"
+            ],
+            "responses": [
+                "Opening Visual Studio Code",
+                "Launching VS Code",
+                "VS Code is starting",
+                "Accessing coding environment"
+            ],
+            "commands": ["open_code_editor"]
+        },
+        {
+            "tag": "open_youtube",
+            "patterns": [
+                "Open YouTube",
+                "Launch YouTube",
+                "Start YouTube",
+                "Play videos",
+                "Access entertainment",
+                "yo YouTube",
+                "can ya open YouTube",
+                "go to YouTube"
+            ],
+            "responses": [
+                "Opening YouTube",
+                "Launching YouTube",
+                "YouTube is starting"
+            ],
+            "commands": ["open_youtube"]
+        },
+        {
+            "tag": "search_on_youtube",
+            "patterns": [
+                "Search on YouTube",
+                "YouTube search",
+                "Look up on YouTube",
+                "Find videos",
+                "Query YouTube",
+                "yo search YouTube for this",
+                "can ya find something on YouTube"
+            ],
+            "responses": [
+                "Searching on YouTube",
+                "Initiating YouTube search",
+                "YouTube search is underway",
+                "Accessing YouTube for videos"
+            ],
+            "commands": ["search_on_youtube"]
+        },
+        {
+            "tag": "play_youtube_video",
+            "patterns": [
+                "Play a video on",
+                "Watch video about",
+                "Play a YouTube video on",
+                "find a video about",
+                "Show me videos about",
+                "Play a video related to",
+                "yo play a video on"
+            ],
+            "responses": [
+                "Searching and playing a YouTube video",
+                "Initiating playback of a video",
+                "Playing a video on the specified topic"
+            ],
+            "commands": ["play_youtube_video"]
+        },
+        {
+            "tag": "search_anything",
+            "patterns": [
+                "Search for",
+                "Search about",
+                "Look up",
+                "Find information about",
+                "Query",
+                "yo search for this",
+                "can ya find something about"
+            ],
+            "responses": [
+                "Searching...",
+                "Initiating search...",
+                "Search is underway",
+                "Accessing information"
+            ],
+            "commands": ["search_anything"]
+        },        
+        {
+            "tag": "open_file_explorer",
+            "patterns": [
+                "Open File Explorer",
+                "Launch File Explorer",
+                "Explore files",
+                "Access file system",
+                "Initiate file navigation",
+                "yo File Explorer",
+                "can ya open File Explorer",
+                "go to File Explorer"
+            ],
+            "responses": [
+                "Opening File Explorer",
+                "Launching File Explorer",
+                "File Explorer is starting",
+                "Accessing file system"
+            ],
+            "commands": ["open_file_explorer"]
+        },
+        {
+            "tag": "open_notepad",
+            "patterns": [
+                "Open Notepad",
+                "Launch Notepad",
+                "Start Notepad",
+                "Take notes",
+                "Access text editor",
+                "yo Notepad",
+                "can ya open Notepad",
+                "go to Notepad"
+            ],
+            "responses": [
+                "Opening Notepad",
+                "Launching Notepad",
+                "Notepad is starting",
+                "Accessing text editor"
+            ],
+            "commands": ["open_notepad_editor"]
+        },
+        {
+            "tag": "open_calendar",
+            "patterns": [
+                "Open Calendar",
+                "Launch Calendar",
+                "Check the date",
+                "Access schedule",
+                "Initiate calendar",
+                "yo Calendar",
+                "can ya open Calendar",
+                "go to Calendar"
+            ],
+            "responses": [
+                "Opening Calendar",
+                "Launching Calendar",
+                "Calendar is starting",
+                "Accessing schedule"
+            ],
+            "commands": ["open_calendar_app"]
+        },
+        {
+            "tag": "open_google_docs",
+            "patterns": [
+                "Open Google Docs",
+                "Launch Google Docs",
+                "Start Google Docs",
+                "Create documents",
+                "Access document editor",
+                "yo Google Docs",
+                "can ya open Google Docs",
+                "go to Google Docs"
+            ],
+            "responses": [
+                "Opening Google Docs",
+                "Launching Google Docs",
+                "Google Docs is starting",
+                "Accessing document editor"
+            ],
+            "commands": ["open_google_docs"]
+        },
+        {
+            "tag": "open_google_sheets",
+            "patterns": [
+                "Open Google Sheets",
+                "Launch Google Sheets",
+                "Start Google Sheets",
+                "Work with spreadsheets",
+                "Access spreadsheet software",
+                "yo Google Sheets",
+                "can ya open Google Sheets",
+                "go to Google Sheets"
+            ],
+            "responses": [
+                "Opening Google Sheets",
+                "Launching Google Sheets",
+                "Google Sheets is starting",
+                "Accessing spreadsheet software"
+            ],
+            "commands": ["open_google_sheets"]
+        },
+        {
+            "tag": "open_terminal",
+            "patterns": [
+                "Open Terminal",
+                "Launch Terminal",
+                "Start Command Prompt",
+                "Run commands",
+                "Access command line",
+                "yo Terminal",
+                "can ya open Terminal",
+                "go to Terminal"
+            ],
+            "responses": [
+                "Opening Terminal",
+                "Launching Command Prompt",
+                "Terminal is starting",
+                "Accessing command line"
+            ],
+            "commands": ["open_command_prompt"]
+        },
+        {
+            "tag": "open_calculator",
+            "patterns": [
+                "Open Calculator",
+                "Launch Calculator",
+                "Start Calculator",
+                "Perform calculations",
+                "Access calculator tool",
+                "yo Calculator",
+                "can ya open Calculator",
+                "go to Calculator"
+            ],
+            "responses": [
+                "Opening Calculator",
+                "Launching Calculator",
+                "Calculator is starting",
+                "Accessing calculator tool"
+            ],
+            "commands": ["open_calculator_app"]
+        },
+        {
+            "tag": "open_browser",
+            "patterns": [
+                "Open Browser",
+                "Launch Browser",
+                "Start Internet Browser",
+                "Visit websites",
+                "Access the internet",
+                "yo Browser",
+                "can ya open Browser",
+                "go to Browser"
+            ],
+            "responses": [
+                "Opening Browser",
+                "Launching Internet Browser",
+                "Browser is starting",
+                "Accessing the internet"
+            ],
+            "commands": ["open_default_browser"]
+        },
+        {
+            "tag": "open_mail",
+            "patterns": [
+                "Open Gmail",
+                "Launch Gmail",
+                "Check Email",
+                "Access inbox",
+                "Initiate email",
+                "yo Gmail",
+                "can ya open Gmail",
+                "go to Gmail"
+            ],
+            "responses": [
+                "Opening Gmail",
+                "Launching Gmail",
+                "Gmail is starting",
+                "Accessing email"
+            ],
+            "commands": ["open_email_client"]
+        },
+        {
+            "tag": "open_settings",
+            "patterns": [
+                "Open Settings",
+                "Launch Settings",
+                "Configure settings",
+                "Access preferences",
+                "Initiate settings",
+                "yo Settings",
+                "can ya open Settings",
+                "go to Settings"
+            ],
+            "responses": [
+                "Opening Settings",
+                "Launching Settings",
+                "Settings is starting",
+                "Accessing preferences"
+            ],
+            "commands": ["open_system_settings"]
+        },
+        {
+            "tag": "open_camera",
+            "patterns": [
+                "Open Camera",
+                "Launch Camera",
+                "Start Camera",
+                "Capture photos",
+                "Access camera",
+                "yo Camera",
+                "can ya open Camera",
+                "go to Camera"
+            ],
+            "responses": [
+                "Opening Camera",
+                "Launching Camera",
+                "Camera is starting",
+                "Accessing camera"
+            ],
+            "commands": ["open_camera_app"]
+        },
+        {
+            "tag": "open_photos",
+            "patterns": [
+                "Open Photos",
+                "Launch Photos",
+                "View Photos",
+                "Access photo library",
+                "Initiate photo viewing",
+                "yo Photos",
+                "can ya open Photos",
+                "go to Photos"
+            ],
+            "responses": [
+                "Opening Photos",
+                "Launching Photos",
+                "Photos is starting",
+                "Accessing photo library"
+            ],
+            "commands": ["open_photo_viewer"]
+        },
+        {
+            "tag": "open_maps",
+            "patterns": [
+                "Open Google Maps",
+                "Launch Maps",
+                "Find directions",
+                "Access maps",
+                "Initiate navigation",
+                "open google maps",
+                "yo Maps",
+                "can ya open Maps",
+                "go to Maps"
+            ],
+            "responses": [
+                "Opening Google Maps",
+                "Launching Maps",
+                "Maps is starting",
+                "Accessing maps"
+            ],
+            "commands": ["open_maps_app"]
+        },
+        {
+            "tag": "open_clock",
+            "patterns": [
+                "Open Clock",
+                "Launch Clock",
+                "Set Alarm",
+                "Access time",
+                "Initiate clock",
+                "yo Clock",
+                "can ya open Clock",
+                "go to Clock"
+            ],
+            "responses": [
+                "Opening Clock",
+                "Launching Clock",
+                "Clock is starting",
+                "Accessing time"
+            ],
+            "commands": ["open_clock_app"]
+        },
+        {
+            "tag": "open_weather",
+            "patterns": [
+                "Check Weather",
+                "Open Weather",
+                "Get weather updates",
+                "Access weather information",
+                "Initiate weather check",
+                "yo Weather",
+                "can ya check the weather",
+                "go to Weather"
+            ],
+            "responses": [
+                "Opening Weather",
+                "Checking Weather",
+                "Weather is starting",
+                "Accessing weather information"
+            ],
+            "commands": ["check_weather"]
+        }
+    ]
 }

@@ -31,7 +31,7 @@ model.load_state_dict(model_state)
 model.eval()
 
 bot_name = "Jarvis"
-def Process(sentence):
+def process(sentence):
     og_sentence = sentence
     sentence = tokenize(sentence)
     X = bag_of_words(sentence, all_words)
@@ -45,18 +45,24 @@ def Process(sentence):
 
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
-    if prob.item() > 0.75:
+    if prob.item() > 0.85:
         for intent in intents['intents']:
             if tag == intent["tag"]:
+                update(commands_history=get("commands_history")+[tag])
                 res = random.choice(intent['responses'])
                 for cmnd in intent['commands']:
                     try:
-                        functions[cmnd]()
+                        try:
+                            functions[cmnd]()
+                        except TypeError:
+                            functions[cmnd](og_sentence)
+
                         new_msg=[{"role": "user", "message": og_sentence}, {"role": "assistant", "message": res}]
-                        update(history=get("history")+new_msg)
+                        update(chat_history=get("chat_history")+new_msg)
                         speak(res)
-                    except:
-                        speak(f"Failed to execute command {cmnd}")
+                    except Exception as e:
+                        speak(f"Failed to execute command {cmnd}.")
+                        print(f"Error: {e}")
     else:
         res = chat(og_sentence)
         speak(res)
