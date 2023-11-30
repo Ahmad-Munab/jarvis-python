@@ -1,5 +1,8 @@
 # Define a global variable called context and assign it an empty dictionary
-context = {}
+context = {
+    "chat_history": [],
+    "commands_history": []
+}
 
 # Define a function to update the context with new key-value pairs
 def update(**kwargs):
@@ -14,4 +17,4 @@ def get(key):
     # Use the global keyword to access the global variable context
     global context
     # Return the value of the key from the context dictionary, or None if the key is not found
-    return context.get(key)
+    return context.get(key) 
