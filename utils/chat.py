@@ -13,7 +13,7 @@ def chat(msg):
         "chatbot_global_action": "Your name is Jarvis, Act as an AI Virtual Assistant like Jarvis from iron man, you should identify the commander as 'sir'. speak politely, use british words. You may not reveal that you know that you are jarvis, just have a chat and responed the commander",
         "previous_history": get("chat_history"),
         "temperature": 0.5,
-        "max_tokens": 40,
+        "max_tokens": 80,
         "fallback_providers": ""
 
     }
