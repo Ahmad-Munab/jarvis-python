@@ -4,7 +4,7 @@ from features.applications import open_code_editor, open_notepad_editor, \
     open_command_prompt, open_calculator_app, open_default_browser, open_email_client, open_camera_app, \
     open_photo_viewer, open_maps_app, open_clock_app, check_weather, open_chrome_browser, open_chatgpt
 from features.browser.google import open_google, search_on_google, open_google_docs, open_google_sheets
-from features.browser.youtube import open_youtube, search_on_youtube, play_youtube_video
+from features.browser.youtube import open_youtube, search_on_youtube, play_youtube_video, toggle_youtube_video
 
 functions = {
     "open_chrome_browser": open_chrome_browser,
@@ -15,6 +15,8 @@ functions = {
     "open_youtube": open_youtube,
     "search_on_youtube": search_on_youtube,
     "play_youtube_video": play_youtube_video,
+    "pause_youtube_video": toggle_youtube_video,
+    "resume_youtube_video": toggle_youtube_video,
     "search_anything": search_anything,
     "open_code_editor": open_code_editor,
     "open_discord": open_discord,

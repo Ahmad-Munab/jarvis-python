@@ -157,6 +157,42 @@
             "commands": ["play_youtube_video"]
         },
         {
+            "tag": "pause_youtube_video",
+            "patterns": [
+                "Pause the video",
+                "Stop the video",
+                "Hold on video",
+                "Pause YouTube",
+                "Pause the YouTube video",
+                "yo pause the video",
+                "can ya stop the video"
+            ],
+            "responses": [
+                "Pausing the YouTube video",
+                "Video paused",
+                "Holding on the video"
+            ],
+            "commands": ["pause_youtube_video"]
+        },
+        {
+            "tag": "resume_youtube_video",
+            "patterns": [
+                "Resume the video",
+                "Play the video again",
+                "Continue the video",
+                "Resume YouTube",
+                "Resume the YouTube video",
+                "yo play the video again",
+                "can ya continue the video"
+            ],
+            "responses": [
+                "Resuming the YouTube video",
+                "Video playing again",
+                "Continuing the video"
+            ],
+            "commands": ["resume_youtube_video"]
+        },
+        {
             "tag": "search_anything",
             "patterns": [
                 "Search for",
