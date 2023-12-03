@@ -17,7 +17,7 @@ def chat(msg):
         "fallback_providers": ""
 
     }
-
+    
     response = requests.post(url, json=payload, headers=headers)
 
     result = json.loads(response.text)

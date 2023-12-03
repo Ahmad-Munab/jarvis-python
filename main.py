@@ -13,8 +13,8 @@ import random
 
 ### ONE ###
 r = sr.Recognizer()
-r.pause_threshold = 0.7
-r.phrase_threshold = -30
+r.pause_threshold = 0.5
+r.phrase_threshold = -25
 r.operation_timeout = 3
 
 #### TWO #####
@@ -42,6 +42,7 @@ def listen_and_respond():
         audio = r.listen(src)
         text = r.recognize_google(audio)
         print(text)
+        print("Understanding and Processing")
         process(text)
     
 
@@ -96,6 +97,8 @@ if __name__ == "__main__":
             except sr.UnknownValueError or sr.WaitTimeoutError:
                 continue
             except Exception as e:
+                if "timed out" in str(e):
+                    continue
                 print("Error:", e)
                 speak("Error taking voice input")
 

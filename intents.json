@@ -161,15 +161,15 @@
             "patterns": [
                 "Pause the video",
                 "Stop the video",
-                "Hold on video",
+                "Hold on the video",
                 "Pause YouTube",
                 "Pause the YouTube video",
                 "yo pause the video",
-                "can ya stop the video"
+                "can ya stop the video",
+                "can ya pause the video"
             ],
             "responses": [
-                "Pausing the YouTube video",
-                "Video paused",
+                "Pausing the video",
                 "Holding on the video"
             ],
             "commands": ["pause_youtube_video"]
@@ -180,6 +180,8 @@
                 "Resume the video",
                 "Play the video again",
                 "Continue the video",
+                "Play the video",
+                "start the video again",
                 "Resume YouTube",
                 "Resume the YouTube video",
                 "yo play the video again",
@@ -195,8 +197,8 @@
         {
             "tag": "search_anything",
             "patterns": [
-                "Search for",
-                "Search about",
+                "search for",
+                "search about",
                 "Look up",
                 "Find information about",
                 "Query",

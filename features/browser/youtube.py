@@ -1,15 +1,16 @@
 import os
 import pywhatkit as kit
 from utils.voice_utils import speak
-
 from utils.context import get
+# from selenium import webdriver
+import pygetwindow as gw
+import time
+import pyautogui as gui
 
-from selenium import webdriver
+# chrome_options = webdriver.ChromeOptions()
+# chrome_options.binary_location = r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
 
-chrome_options = webdriver.ChromeOptions()
-chrome_options.binary_location = r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
-
-driver = webdriver.Chrome(options=chrome_options, )
+# driver = webdriver.Chrome(options=chrome_options, )
 
 
 def open_youtube():
@@ -72,37 +73,36 @@ def play_youtube_video(sentence: str):
         speak("Couldn't find a video to play")
 
 
-def find_youtube_tab():
-    cmnd_history = get("command_history")
-    print(driver.current_url)
-    if any(command in cmnd_history for command in ["open_youtube", "play_youtube_video", "search_on_youtube"]):
-        speak("Youtube isn't open yet")
-        return False
+def toggle_video(action):
     try:
-        if "https://www.youtube.com/watch?v=" in driver.current_url:
-            return True
-        
-        tabs = driver.window_handles
-        for tab in tabs:
-            driver.switch_to.window(tab)
-            print(driver.current_url)
-            if "https://www.youtube.com/watch?v=" in driver.current_url:
-                return True
-        return False
+        delay = 0  # Seconds
+        time.sleep(delay)
+        windows_to_activate = gw.getWindowsWithTitle("Brave") + gw.getWindowsWithTitle("Google Chrome")
+        if len(windows_to_activate) == 0:
+            return "No browser opened"
+        for window in windows_to_activate:
+            window.activate()
+            tabs_dp = set()
+            cwt = window.title
+            while "- YouTube -" not in cwt:
+                if cwt in tabs_dp:
+                    tabs_dp = "DUP"
+                    break
+                tabs_dp.add(cwt)
+                gui.hotkey("ctrl", "tab")
+                cwt = gw.getActiveWindowTitle()
+                time.sleep(delay)
+            if tabs_dp == "DUP":
+                continue
+            gui.press("k")
+            return action
+        return "Youtube not opened"
     except Exception as e:
-        print(f"Error: {e}")
-        return False
+        return e
 
-def toggle_youtube_video():
-    try:
-        if find_youtube_tab():
-            play_button = driver.find_element_by_css_selector(".ytp-play-button")
-            if "Play" in play_button.title:
-                speak("Video continuing")
-            elif "Pause" in play_button.title:
-                speak("Video Paused")
-
-            play_button.click()
-    except Exception as e:
-        print(f"Error: {e}")
-        speak("Couldn't play/pause the video")
+def toggle_youtube_video(sentence):
+    sentence = sentence.lower()
+    if any(word in sentence for word in ["play", "resume", "start", "continue"]):
+        speak(toggle_video("Video Resumed"))
+    elif any(word in sentence for word in ["pause", "stop", "hold"]):
+        speak(toggle_video("Video Paused"))
