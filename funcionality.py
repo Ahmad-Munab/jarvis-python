@@ -32,6 +32,7 @@ model.eval()
 
 bot_name = "Jarvis"
 def process(sentence):
+    print("Generating Response...")
     og_sentence = sentence
     sentence = tokenize(sentence)
     X = bag_of_words(sentence, all_words)
@@ -52,14 +53,14 @@ def process(sentence):
                 res = random.choice(intent['responses'])
                 for cmnd in intent['commands']:
                     try:
+                        speak(res)
                         try:
                             functions[cmnd]()
                         except TypeError:
                             functions[cmnd](og_sentence)
-
                         new_msg=[{"role": "user", "message": og_sentence}, {"role": "assistant", "message": res}]
                         update(chat_history=get("chat_history")+new_msg)
-                        speak(res)
+                        
                     except Exception as e:
                         speak(f"Failed to execute command {cmnd}.")
                         print(f"Error: {e}")
