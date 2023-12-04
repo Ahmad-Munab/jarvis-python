@@ -21,6 +21,8 @@ def search_on_youtube(sentence: str):
 
     prefixes = [
                 "search on youtube about",
+                "search on youtube",
+                "search youtube for",
                 "youTube search",
                 "look up on youtube",
                 "find videos on",

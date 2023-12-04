@@ -7,6 +7,7 @@ headers = {"Authorization": f"Bearer {config('EDENAI_API_KEY')}"}
 url = "https://api.edenai.run/v2/text/chat"
 
 def chat(msg):
+    print(get("chat_history"))
     payload = {
         "providers": "openai",
         "text": msg,
