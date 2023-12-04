@@ -90,6 +90,8 @@
                 "Initiate coding environment",
                 "yo code",
                 "can ya open VS Code",
+                "open cursor",
+                "start cursor code editor",
                 "go to VS Code"
             ],
             "responses": [
