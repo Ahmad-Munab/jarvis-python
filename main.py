@@ -14,11 +14,6 @@ def listen_and_respond():
 
                 # Listen for audio input
                 audio = recognizer.listen(source)
-
-                # Check if there's any audio input
-                if audio.get_segment(0, 0.5).rms < 20:
-                    continue
-
                 # Recognize the speech
                 text = recognizer.recognize_google(audio)
 
@@ -29,7 +24,7 @@ def listen_and_respond():
 
             # Handle errors if no speech is recognized
             except sr.UnknownValueError:
-                print("Could not understand audio")
+                continue
             except sr.RequestError as e:
                 print("Could not request results from Google Speech Recognition service; {0}".format(e))
             except Exception as e:

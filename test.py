@@ -1,5 +1,6 @@
 import os
 import time
+import subprocess as sp
 
 def  update_jarvis_codebase(commit_msg, branch="munab"):
     delay = 0.1
@@ -25,7 +26,12 @@ def  update_jarvis_codebase(commit_msg, branch="munab"):
         time.sleep(delay)
         
         print("Pushing changes...")
-        os.system(f"git push --force-with-lease origin {branch}")
+        result = sp.run(f"git push --force-with-lease origin {branch}", capture_output=True, text=True, shell=True)
+        output = result.stdout.strip()
+        url_start = output.find('https://')
+        url_end = output.find('.git')
+        repo_url = output[url_start:url_end + 4]
+        os.system(f"start {repo_url}")
     except Exception as e:
         print(f"Error: {e}")
 
