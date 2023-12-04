@@ -46,15 +46,17 @@ def process(sentence):
 
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
-    print("SURE:", prob.item())
-    if prob.item() > 0.94:
+    print("SURITY:", prob.item())
+    if prob.item() > 0.95:
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 update(commands_history=get("commands_history")+[tag])
-                res = random.choice(intent['responses'])
+                if (len(intent["responses"]) > 0):
+                    res = random.choice(intent['responses'])
+                    speak(res)
+
                 for cmnd in intent['commands']:
                     try:
-                        speak(res)
                         try:
                             functions[cmnd]()
                         except TypeError:
@@ -63,8 +65,8 @@ def process(sentence):
                         update(chat_history=get("chat_history")+new_msg)
                         
                     except Exception as e:
-                        speak(f"Failed to execute command {cmnd}.")
                         print(f"Error: {e}")
+                        speak(f"Failed to execute command {cmnd}.")
     else:
         res = chat(og_sentence)
         speak(res)
