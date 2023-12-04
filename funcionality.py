@@ -33,7 +33,7 @@ model.eval()
 bot_name = "Jarvis"
 def process(sentence):
     print("Generating Response...")
-    og_sentence = sentence
+    og_sentence = sentence.lower()
     sentence = tokenize(sentence)
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])

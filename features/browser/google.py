@@ -7,7 +7,6 @@ def open_google():
     os.system("start https://google.com")
 
 def search_on_google(sentence: str):
-    sentence = sentence.lower()
 
     prefixes = [
                 "search in google",

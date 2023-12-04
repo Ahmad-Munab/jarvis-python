@@ -17,7 +17,6 @@ def open_youtube():
     os.system("start https://youtube.com")
 
 def search_on_youtube(sentence: str):
-    sentence = sentence.lower()
 
     prefixes = [
                 "search on youtube about",
@@ -51,7 +50,6 @@ def search_on_youtube(sentence: str):
         speak("Error fetchiing youtube")
 
 def play_youtube_video(sentence: str):
-    sentence = sentence.lower()
 
     prefixes = [
                 "play a video on",
@@ -103,7 +101,6 @@ def toggle_video(action):
         return e
 
 def toggle_youtube_video(sentence):
-    sentence = sentence.lower()
     if any(word in sentence for word in ["play", "resume", "start", "continue"]):
         speak(toggle_video("Video Resumed"))
     elif any(word in sentence for word in ["pause", "stop", "hold"]):
