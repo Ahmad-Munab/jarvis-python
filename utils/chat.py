@@ -1,5 +1,5 @@
 import json
-import requests, os
+import requests
 from utils.context import get, update
 from decouple import config
 
@@ -7,7 +7,7 @@ headers = {"Authorization": f"Bearer {config('EDENAI_API_KEY')}"}
 url = "https://api.edenai.run/v2/text/chat"
 
 def chat(msg):
-    print(get("chat_history"))
+    # print(get("chat_history"))
     payload = {
         "providers": "openai",
         "text": msg,
@@ -18,9 +18,7 @@ def chat(msg):
         "fallback_providers": ""
 
     }
-    
     response = requests.post(url, json=payload, headers=headers)
-
     result = json.loads(response.text)
     update(history=get("chat_history")+result['openai']['message'])
 

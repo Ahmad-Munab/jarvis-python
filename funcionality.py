@@ -32,7 +32,6 @@ model.eval()
 
 bot_name = "Jarvis"
 def process(sentence):
-    print("Generating Response...")
     og_sentence = sentence.lower()
     sentence = tokenize(sentence)
     X = bag_of_words(sentence, all_words)
@@ -47,10 +46,13 @@ def process(sentence):
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
     print("SURITY:", prob.item())
+    print("Generating Response...")
+
     if prob.item() > 0.95:
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 update(commands_history=get("commands_history")+[tag])
+                res="Executing your command"
                 if (len(intent["responses"]) > 0):
                     res = random.choice(intent['responses'])
                     speak(res)
