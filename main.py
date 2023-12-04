@@ -1,37 +1,10 @@
-import speech_recognition as sr
 from funcionality import process
-from utils.voice_utils import speak
+from utils.voice_utils import speak, listen
 import random
 
 def listen_and_respond():
-    # Initialize the speech recognizer
-    recognizer = sr.Recognizer()
-    with sr.Microphone() as source:
-        while True:
-            try:
-                # Adjust for ambient noise
-                recognizer.adjust_for_ambient_noise(source, duration=0.5)
-
-                # Listen for audio input
-                audio = recognizer.listen(source)
-                # Recognize the speech
-                text = recognizer.recognize_google(audio)
-
-                # Process the recognized text
-                print(text)
-                print("Understanding and Processing")
-                process(text)
-
-            # Handle errors if no speech is recognized
-            except sr.UnknownValueError:
-                continue
-            except sr.RequestError as e:
-                print("Could not request results from Google Speech Recognition service; {0}".format(e))
-            except Exception as e:
-                if "timed out" in str(e):
-                    continue
-                print("Error:", e)
-                speak("Error taking voice input")
+    text = listen()
+    process(text)
 
 
 greetings = [
@@ -55,10 +28,7 @@ if __name__ == "__main__":
 
     try:
         while True:
-            try:
-                listen_and_respond()
-            except (sr.UnknownValueError, sr.WaitTimeoutError):
-                continue
+            listen_and_respond() 
     except KeyboardInterrupt:
         speak("Bye sir; Closing...")
         quit()

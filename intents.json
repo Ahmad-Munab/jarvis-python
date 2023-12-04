@@ -307,12 +307,7 @@
                 "can ya push to GitHub",
                 "update the git repository with latest version of the codebase"
             ],
-            "responses": [
-                "Updating Jarvis codebase",
-                "Pushing the latest changes to GitHub",
-                "Syncing code to GitHub",
-                "Codebase is updating"
-            ],
+            "responses": [],
             "commands": ["update_jarvis_codebase"]
         },        
         {
