@@ -26,7 +26,7 @@ def update_codebase(commit_msg, branch="munab"):
     print("Pushing changes...")
     os.system(f"git push --force-with-lease origin {branch}")
 
-    os.system(f"start {config('REPO_URL')}")
+    os.system(f"start {config('CREATE_PR_URL')}")
 
 def update_jarvis_codebase():
     commit_msg = ask("What should be the commit message sir?")
