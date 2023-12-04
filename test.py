@@ -1,33 +1,34 @@
-
-import pygetwindow as gw
+import os
 import time
-import pyautogui as gui
 
-def toggle_video(action):
+def  update_jarvis_codebase(commit_msg, branch="munab"):
     try:
-        delay = 0  # Seconds
-        time.sleep(delay)
-        windows_to_activate = gw.getWindowsWithTitle("Brave") + gw.getWindowsWithTitle("Google Chrome")
-        if len(windows_to_activate) == 0:
-            return "No browser opened"
-        for window in windows_to_activate:
-            window.activate()
-            tabs_dp = set()
-            cwt = window.title
-            while "- YouTube -" not in cwt:
-                if cwt in tabs_dp:
-                    tabs_dp = "DUP"
-                    break
-                tabs_dp.add(cwt)
-                gui.hotkey("ctrl", "tab")
-                cwt = gw.getActiveWindowTitle()
-                time.sleep(delay)
-            if tabs_dp == "DUP":
-                continue
-            gui.press("k")
-            return action
-        return "Youtube not opened"
+        print("Adding files...")
+        os.system(f"git add .")
+        time.sleep(0.5)
+        
+        print("Committing changes...")
+        os.system(f"git commit -m {commit_msg}")
+        time.sleep(0.5)
+        
+        # print("Creating new branch...")
+        # os.system(f"git checkout -b {branch}")
+        # time.sleep(2)
+        
+        print("Fetching updates...")
+        os.system(f"git fetch")
+        time.sleep(0.5)
+        
+        print("Rebasing with main...")
+        os.system(f"git rebase origin/main")
+        time.sleep(0.5)
+        
+        print("Pushing changes...")
+        os.system(f"git push --force-with-lease origin {branch}")
+        
     except Exception as e:
-        return e
+        print(f"Error: {e}")
 
-print(toggle_video("Pause video"))
+
+update_jarvis_codebase("Testing ")
+

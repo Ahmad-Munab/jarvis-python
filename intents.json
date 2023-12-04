@@ -289,6 +289,31 @@
             "commands": ["open_github"]
         },
         {
+            "tag": "update_jarvis_codebase",
+            "patterns": [
+                "Push your latest version to git",
+                "Push yourself to github",
+                "Update Jarvis codebase",
+                "Update your codebase",
+                "Update your codebase to github",
+                "Sync your codebase to git",
+                "Push latest version of jarvis",
+                "Push latest codebase to GitHub",
+                "Push your latest version to Git",
+                "Sync code to GitHub",
+                "yo push your codebase",
+                "can ya push to GitHub",
+                "update the git repository with latest version of the codebase"
+            ],
+            "responses": [
+                "Updating Jarvis codebase",
+                "Pushing the latest changes to GitHub",
+                "Syncing code to GitHub",
+                "Codebase is updating"
+            ],
+            "commands": ["update_jarvis_codebase"]
+        },        
+        {
             "tag": "open_file_explorer",
             "patterns": [
                 "Open File Explorer",

@@ -5,6 +5,7 @@ from features.applications import open_code_editor, open_notepad_editor, \
     open_photo_viewer, open_maps_app, open_clock_app, check_weather, open_chrome_browser, open_chatgpt
 from features.browser.google import open_google, search_on_google, open_google_docs, open_google_sheets
 from features.browser.youtube import open_youtube, search_on_youtube, play_youtube_video, toggle_youtube_video
+from features.tools import  update_jarvis_codebase
 
 functions = {
     "open_chrome_browser": open_chrome_browser,
@@ -23,6 +24,7 @@ functions = {
     "open_facebook": open_facebook,
     "start_google_meet": start_google_meet,
     "open_github": open_github,
+    "update_jarvis_codebase": update_jarvis_codebase,
     "open_file_explorer": open_file_explorer,
     "open_notepad_editor": open_notepad_editor,
     "open_calendar_app": open_calendar_app,
