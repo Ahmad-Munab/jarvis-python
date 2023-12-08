@@ -590,26 +590,6 @@
                 "Accessing time"
             ],
             "commands": ["open_clock_app"]
-        },
-        {
-            "tag": "open_weather",
-            "patterns": [
-                "Check Weather",
-                "Open Weather",
-                "Get weather updates",
-                "Access weather information",
-                "Initiate weather check",
-                "yo Weather",
-                "can ya check the weather",
-                "go to Weather"
-            ],
-            "responses": [
-                "Opening Weather",
-                "Checking Weather",
-                "Weather is starting",
-                "Accessing weather information"
-            ],
-            "commands": ["check_weather"]
         }
     ]
 }
